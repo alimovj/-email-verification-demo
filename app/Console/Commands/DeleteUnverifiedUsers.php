@@ -8,7 +8,7 @@ use App\Notifications\VerifyReminderNotification;
 class DeleteUnverifiedUsers extends Command
 {
     protected $signature = 'users:delete-unverified';
-    protected $description = '3 kun ichida email tasdiqlamagan foydalanuvchilarni o‘chirish';
+    protected $description = '3 kun ichida email tasdiqlamagan foydalanuvchilarni o‘chirish'
 
     public function handle()
     {
