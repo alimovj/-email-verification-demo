@@ -12,8 +12,19 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        
+app()->afterBootstrapping(
+    \Illuminate\Foundation\Bootstrap\BootProviders::class,
+    function () {
+        
+        app(\Illuminate\Console\Scheduling\Schedule::class)
+            ->command(DeleteUnverifiedUsers::class)
+            ->daily(); 
+    }
+);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
     })->create();
+
+

@@ -2,13 +2,15 @@
 
 namespace App\Providers;
 
+use App\Events\UserRegistered;
 use Illuminate\Support\ServiceProvider;
+use App\Listeners\SendVerificationEmail;
 
 class AppServiceProvider extends ServiceProvider
 {
-    /**
-     * Register any application services.
-     */
+
+
+
     public function register(): void
     {
         //
