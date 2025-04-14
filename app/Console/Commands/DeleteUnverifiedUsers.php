@@ -13,7 +13,7 @@ class DeleteUnverifiedUsers extends Command
     public function handle()
     {
               
-$remindThreshold = Carbon::now()->subDays(2)
+$remindThreshold = Carbon::now()->subDays(2);
 
 $users = User::whereNull('email_verified_at')
     ->whereDate('created_at', $remindThreshold->toDateString())
