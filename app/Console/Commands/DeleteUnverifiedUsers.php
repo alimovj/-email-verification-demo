@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Log;
 use App\Notifications\VerifyReminderNotification;
 
 class DeleteUnverifiedUsers extends Command
-{
+
     protected $signature = 'users:delete-unverified';
     protected $description = '3 kun ichida email tasdiqlamagan foydalanuvchilarni o‘chirish';
 
